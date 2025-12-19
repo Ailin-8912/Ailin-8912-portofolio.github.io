@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portofolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo">Fadhil <span>M.</span></h1>
+
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div class="text-content">
+          <h2>Hello, I'm <span id="typing-text"></span></h2>
+          <h3 id="typing-text-2"></h3>
+
+          <p>
+            I made a website about my experiences at school during the first
+            semester.
+          </p>
+
+          <div class="buttons">
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+            <a href="#projects" class="btn btn-secondary">My Work</a>
+          </div>
+
+          <div class="social-icons">
+            <a
+              href="https://github.com/Ailin-8912"
+              target="_blank"
+              class="social-icon github"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UC3_zpO5xSGSI27wSME-erJw"
+              target="_blank"
+              class="social-icon youtube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              class="social-icon instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="image-content">
+          <div class="circular-image">
+            <img src="images/photo.png" alt="Gambar Profil" />
+          </div>
+        </div>
+      </div>
+      <div class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="container about-content">
+        <div
+          class="profile-image-container wow fadeInLeft"
+          data-wow-delay="0.2s"
+        >
+          <img
+            src="images/sma.png"
+            alt="Fadhil Muhammad Abid Al Jabbar"
+            class="profile-image"
+          />
+        </div>
+
+        <div class="about-text-content wow fadeInRight" data-wow-delay="0.4s">
+          <h2 class="section-title">About Me</h2>
+
+          <p>
+            Hello world, Selamat datang di web saya. <br />
+            Saya adalah seorang santri dari sekolah SMAIT HSI BOARDING
+            SCHOOL.<br />
+            Di sekolah ini saya sangat banyak belajar, diantaranya : Bahasa
+            Arab, IT, Tahfidz, dll.
+          </p>
+          <br />
+          <p>
+            Di web ini saya ingin membagikan pengalaman saya belajar selama 1
+            semester full dikelas 10 ini, didalamnya ada IT, Bahasa Arab,
+            Tahfidz, dll.
+          </p>
+          <br />
+
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="label">Name:</span>
+              <span class="value">Fadhil Muhammad Abid Al Jabbar</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">School:</span>
+              <span class="value">SMAIT HSI Boarding School</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Email:</span>
+              <span class="value">fadhilmuhammad.8912@gmail.com</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Residence:</span>
+              <span class="value">Indramayu, Indonesia</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Whatsapp:</span>
+              <span class="value">+62 857 1881 3719</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          My Skills
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-item wow fadeInUp" data-wow-delay="0.2s">
+            <div class="skill-icon python-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Python</h3>
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="30%"></div>
+                <span class="progress-number">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item wow fadeInUp" data-wow-delay="0.3s">
+            <div class="skill-icon css-icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <div class="skill-info">
+              <h3>CSS</h3>
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="45%"></div>
+                <span class="progress-number">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item wow fadeInUp" data-wow-delay="0.4s">
+            <div class="skill-icon html-icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <div class="skill-info">
+              <h3>HTML</h3>
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="50%"></div>
+                <span class="progress-number">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item wow fadeInUp" data-wow-delay="0.5s">
+            <div class="skill-icon tailwind-icon">
+              <i class="fas fa-wind"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Tailwind CSS</h3>
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="70%"></div>
+                <span class="progress-number">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item wow fadeInUp" data-wow-delay="0.6s">
+            <div class="skill-icon arabic-icon">
+              <i class="fas fa-language"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Bahasa Arab</h3>
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="90%"></div>
+                <span class="progress-number">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-item wow fadeInUp" data-wow-delay="0.7s">
+            <div class="skill-icon quran-icon">
+              <i class="fas fa-quran"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Tahfidz Al-Qur'an</h3>
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="90%"></div>
+                <span class="progress-number">0%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          My Project
+        </h2>
+
+        <div class="projects-grid">
+          <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
+            <div class="project-image">
+              <img src="images/Code.png" alt="Project IT" />
+              <div class="project-overlay">
+                <a href="it.html"><span>View Detail</span></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Project IT</h3>
+            </div>
+          </div>
+
+          <div class="project-item wow fadeInUp" data-wow-delay="0.3s">
+            <div class="project-image">
+              <img src="images/image.png" alt="Project Tahfidz" />
+              <div class="project-overlay">
+                <a href="tahfidz.html"><span>View Detail</span></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Project Tahfidz</h3>
+            </div>
+          </div>
+
+          <div class="project-item wow fadeInUp" data-wow-delay="0.4s">
+            <div class="project-image">
+              <img src="images/Aby.png" alt="Project Bahasa Arab" />
+              <div class="project-overlay">
+                <a href="bahasa_arab.html"><span>View Detail</span></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Project Bahasa Arab</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Contact Me</h2>
+
+        <div class="contact-wrapper">
+          <div class="contact-form wow fadeInLeft" data-wow-delay="0.2s">
+            <form action="#">
+              <div class="input-group">
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="input-group">
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <div class="input-group">
+                <textarea
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <div class="button-wrapper">
+                <button type="submit" class="btn-cool-submit">
+                  <span>Submit</span>
+                  <div class="icon-circle">
+                    <i class="fas fa-paper-plane"></i>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-info wow fadeInRight" data-wow-delay="0.4s">
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="info-text">
+                <span>Location</span>
+                <p>Indramayu, Indonesia</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div class="info-text">
+                <span>Email</span>
+                <p>fadhilmuhammad.8912@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="info-text">
+                <span>WhatsApp</span>
+                <p>+62 857 1881 3719</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fab fa-instagram"></i></div>
+              <div class="info-text">
+                <span>Instagram</span>
+                <p>@ailin_8912</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h3>Fadhil<span> Muhammad</span> Abid<span> Al Jabbar</span></h3>
+            <p>
+              Seorang pelajar yang berfokus pada IT, Tahfidz, dan Bahasa Arab.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#navbar">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-social">
+            <h4>Follow Me</h4>
+            <div class="social-icons">
+              <a href="https://github.com/Ailin-8912" class="social-icon github"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://www.youtube.com/@FadhilMuhammadA.A-v6f" class="social-icon youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.instagram.com/ailin_6148/" class="social-icon instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Fadhil Muhammad Abid Al Jabbar. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

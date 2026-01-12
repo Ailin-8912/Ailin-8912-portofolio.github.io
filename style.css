@@ -40,19 +40,16 @@ body.dark-mode {
   --navbar-bg: rgba(30, 30, 30, 0.95);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 html {
   scroll-behavior: smooth;
 }
+
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
@@ -125,6 +122,7 @@ section {
   display: flex;
   align-items: center;
   list-style: none;
+  color: yellow;
 }
 
 .nav-menu li {
@@ -159,6 +157,7 @@ section {
   background-color: var(--text-color);
   margin: 3px 0;
 }
+
 .logo span {
   color: #007bff;
 }
@@ -224,7 +223,7 @@ section {
   overflow: hidden;
   border: 10px solid var(--secondary-color);
   box-shadow: 0 10px 30px transparent;
-  transition: all 0.5s ease; /* Animasi Photo */
+  transition: all 0.5s ease;
 }
 
 .circular-image img {
@@ -234,10 +233,9 @@ section {
   transition: transform 0.5s ease;
 }
 
-/* Hover Animasi Foto Hero */
 .circular-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 15px 40px rgb(255, 255, 255);
+  box-shadow: 0 15px 40px transparent;
   border-color: transparent;
 }
 
@@ -274,6 +272,7 @@ section {
 .social-icon.instagram {
   background: var(--instagram-gradient);
 }
+
 .scroll-down {
   position: absolute;
   bottom: 30px;
@@ -287,6 +286,7 @@ section {
   font-size: 2rem;
   animation: bounceArrow 2s infinite;
 }
+
 @keyframes bounceArrow {
   0%,
   20%,
@@ -302,10 +302,12 @@ section {
     transform: translateX(-50%) translateY(-5px);
   }
 }
+
 .scroll-down:hover {
   color: var(--text-color);
   transition: 0.3s;
 }
+
 /*====================================================================
   4. ABOUT & SKILLS SECTION
 ======================================================================*/
@@ -375,9 +377,10 @@ section {
   position: relative;
   overflow: hidden;
 }
+
 .skill-item:hover {
-  transform: translateY(-10px); /* Terangkat sedikit */
-  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.2); /* Shadow lebih besar & berwarna biru */
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.2);
   border-color: var(--primary-color);
 }
 
@@ -392,6 +395,7 @@ section {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Color Icons */
 .python-icon {
   color: #3776ab;
 }
@@ -436,19 +440,6 @@ section {
   font-size: 0.85rem;
 }
 
-body.dark-mode .skill-item {
-  background-color: #252525;
-  border: 1px solid #333;
-}
-
-body.dark-mode .skill-icon {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-body.dark-mode .dark-mode-toggle i {
-  color: #f1c40f !important;
-}
-
 /*====================================================================
   6. PROJECTS SECTION
 ======================================================================*/
@@ -458,7 +449,7 @@ body.dark-mode .dark-mode-toggle i {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
   margin-top: 3rem;
 }
@@ -534,120 +525,6 @@ body.dark-mode .dark-mode-toggle i {
 
 .project-item:hover .project-overlay {
   opacity: 1;
-}
-
-@media (max-width: 480px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
-/*====================================================================
-  5. RESPONSIVENESS (Global)
-======================================================================*/
-@media (max-width: 992px) {
-  .menu-toggle {
-    display: flex;
-  }
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    flex-direction: column;
-    background: var(--secondary-color);
-    width: 100%;
-    height: calc(100vh - 70px);
-    transition: 0.4s;
-    z-index: 999;
-    visibility: hidden;
-  }
-  .nav-menu.active {
-    left: 0;
-  }
-  .hero-content,
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .text-content {
-    max-width: 100%;
-  }
-  .profile-image-container,
-  .circular-image {
-    width: 300px;
-    min-width: 300px;
-    height: 300px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .detail-item {
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
-  }
-  .skill-item {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-/* Small Mobile (Layar di bawah 480px) */
-@media (max-width: 480px) {
-  /* Memastikan body tidak bisa goyang sama sekali */
-  html,
-  body {
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
-  }
-
-  .hero {
-    padding-top: 120px;
-  }
-
-  .text-content h2 {
-    font-size: 2.2rem;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .buttons a {
-    margin-right: 0;
-    text-align: center;
-    width: 100%;
-  }
-
-  /* PERBAIKAN DI SINI: Hilangkan min-width agar tidak melebar keluar layar */
-  .circular-image,
-  .profile-image-container {
-    width: 250px;
-    min-width: unset !important; /* Mematikan 400px yang tadi */
-    height: 250px;
-    max-width: 100%; /* Tambahan agar aman */
-  }
-
-  /* Memastikan gambar di dalam container juga tidak meluap */
-  .profile-image,
-  .circular-image img {
-    max-width: 100%;
-  }
-
-  .skills-item {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  /* Tambahan Gembok untuk Navbar Mobile */
-  .nav-menu {
-    width: 100%;
-    max-width: 100vw;
-  }
 }
 
 /*====================================================================
@@ -749,15 +626,6 @@ body.dark-mode .input-group textarea {
   border-color: #444;
 }
 
-@media (max-width: 992px) {
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-  }
-  .contact-info {
-    order: -1;
-  }
-}
-
 /*====================================================================
   8. FOOTER SECTION
 ======================================================================*/
@@ -783,6 +651,7 @@ body.dark-mode .input-group textarea {
 .footer-logo h3 span {
   color: var(--primary-color);
 }
+
 .footer-logo p {
   color: var(--dark-gray);
   line-height: 1.6;
@@ -798,6 +667,7 @@ body.dark-mode .input-group textarea {
 .footer-links ul {
   list-style: none;
 }
+
 .footer-links ul li {
   margin-bottom: 0.8rem;
 }
@@ -819,17 +689,6 @@ body.dark-mode .input-group textarea {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   color: var(--light-gray);
   font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 2rem;
-  }
-  .footer-social .social-icons {
-    justify-content: center;
-  }
 }
 
 .footer .social-icon {
@@ -925,6 +784,7 @@ body.dark-mode .footer-bottom {
   margin-bottom: 1rem;
   color: var(--text-color);
 }
+
 .it-info p {
   color: var(--dark-gray);
   font-size: 0.95rem;
@@ -937,6 +797,7 @@ body.dark-mode .footer-bottom {
   justify-content: center;
   gap: 10px;
 }
+
 .tech-stack span {
   font-size: 0.75rem;
   font-weight: 700;
@@ -954,6 +815,7 @@ body.dark-mode .footer-bottom {
   margin-top: 5rem;
   text-align: center;
 }
+
 .btn-home {
   display: inline-flex;
   align-items: center;
@@ -991,6 +853,7 @@ body.dark-mode .it-card {
   padding: 100px 0;
   min-height: 100vh;
 }
+
 .arabic-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1046,6 +909,7 @@ body.dark-mode .it-card {
   padding: 10px 0;
   transition: bottom 0.4s ease;
 }
+
 .card-hover-info a {
   text-decoration: none;
   color: rgb(1, 49, 116);
@@ -1054,7 +918,7 @@ body.dark-mode .it-card {
 .arabic-card:hover .card-hover-info {
   bottom: 0;
 }
-/* Base Style Tombol */
+
 .btn-back-home {
   display: inline-flex;
   align-items: center;
@@ -1067,18 +931,11 @@ body.dark-mode .it-card {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-
-  /* Shadow Default */
   box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
-
-  /* Transisi Halus */
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  /* Animasi saat pertama kali muncul */
   animation: bounceIn 1s ease;
 }
 
-/* Efek Hover */
 .btn-back-home:hover {
   transform: translateY(-5px) scale(1.05);
   background: linear-gradient(45deg, #0056b3, #007bff);
@@ -1086,12 +943,10 @@ body.dark-mode .it-card {
   color: #ffffff;
 }
 
-/* Efek saat klik (Active) */
 .btn-back-home:active {
   transform: translateY(0) scale(0.98);
 }
 
-/* Animasi Ikon saat Hover */
 .btn-back-home i {
   transition: transform 0.3s ease;
 }
@@ -1100,7 +955,6 @@ body.dark-mode .it-card {
   transform: translateX(-5px);
 }
 
-/* Keyframes Animasi Muncul */
 @keyframes bounceIn {
   0% {
     opacity: 0;
@@ -1118,16 +972,6 @@ body.dark-mode .it-card {
   }
 }
 
-/* Responsif untuk Mobile */
-@media (max-width: 480px) {
-  .btn-back-home {
-    width: 100%; /* Tombol lebar penuh di HP */
-    justify-content: center;
-    padding: 12px 20px;
-    font-size: 0.9rem;
-  }
-}
-
 /*====================================================================
   11. TAHFIDZ PAGE
 ======================================================================*/
@@ -1135,6 +979,7 @@ body.dark-mode .it-card {
   background: var(--background-start);
   transition: 0.3s;
 }
+
 .tahfidz-section {
   min-height: 100vh;
   display: flex;
@@ -1187,15 +1032,15 @@ body.dark-mode .it-card {
   transform: scale(1.1) translateY(-5px);
   text-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
 }
-/* Container Utama */
+
 .back-home-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
-  object-position: center;
   height: 100vh;
 }
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -1208,99 +1053,20 @@ body.dark-mode .it-card {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-
-  /* Shadow Default */
   box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
-
-  /* Transisi Halus */
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  /* Animasi saat pertama kali muncul */
   animation: bounceIn 1s ease;
 }
+
 .badge a {
   text-decoration: none;
 }
+
 .badge:hover {
   transform: translateY(-5px) scale(1.05);
   background: linear-gradient(45deg, #0056b3, #007bff);
   box-shadow: 0 15px 30px rgba(0, 123, 255, 0.5);
   color: #ffffff;
-}
-
-/* Base Style Tombol */
-.btn-back-home {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  background: linear-gradient(45deg, #007bff, #00d4ff);
-  color: #ffffff;
-  padding: 14px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  justify-content: center;
-
-  /* Shadow Default */
-  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
-
-  /* Transisi Halus */
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  /* Animasi saat pertama kali muncul */
-  animation: bounceIn 1s ease;
-}
-
-/* Efek Hover */
-.btn-back-home:hover {
-  transform: translateY(-5px) scale(1.05);
-  background: linear-gradient(45deg, #0056b3, #007bff);
-  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.5);
-  color: #ffffff;
-}
-
-/* Efek saat klik (Active) */
-.btn-back-home:active {
-  transform: translateY(0) scale(0.98);
-}
-
-/* Animasi Ikon saat Hover */
-.btn-back-home i {
-  transition: transform 0.3s ease;
-}
-
-.btn-back-home:hover i {
-  transform: translateX(-5px);
-}
-
-/* Keyframes Animasi Muncul */
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Responsif untuk Mobile */
-@media (max-width: 480px) {
-  .btn-back-home {
-    width: 100%; /* Tombol lebar penuh di HP */
-    justify-content: center;
-    padding: 12px 20px;
-    font-size: 0.9rem;
-  }
 }
 
 /*====================================================================
@@ -1378,19 +1144,11 @@ body.dark-mode .it-card {
   transition: all 0.6s ease;
 }
 
-@media (max-width: 480px) {
-  .btn-cool-submit {
-    width: 100%;
-    justify-content: center;
-    font-size: 1rem;
-    padding: 15px 25px;
-  }
-}
 /*====================================================================
-  13. ADDITIONAL RESPONSIVENESS (Organized)
+  13. RESPONSIVE QUERIES (ORGANIZED & MERGED)
 ======================================================================*/
 
-/* Tablet & Mobile (Layar di bawah 1024px) */
+/* --- 1. TABLET & SMALL DESKTOP (Max 1024px) --- */
 @media (max-width: 1024px) {
   .it-grid,
   .arabic-grid,
@@ -1401,15 +1159,55 @@ body.dark-mode .it-card {
   }
 }
 
-/* Landscape Mobile / Large Mobile (Layar di bawah 992px) */
+/* --- 2. LARGE MOBILE & TABLET PORTRAIT (Max 992px) --- */
 @media (max-width: 992px) {
-  .hero-content {
-    flex-direction: column-reverse; /* Foto di atas, teks di bawah */
-    gap: 1.5rem;
+  .menu-toggle {
+    display: flex;
   }
 
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: var(--secondary-color);
+    width: 100%;
+    height: calc(100vh - 70px);
+    transition: 0.4s;
+    z-index: 999;
+    visibility: hidden;
+    padding-top: 2rem;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    visibility: visible;
+  }
+
+  .nav-menu li {
+    margin: 1.5rem 0;
+  }
+
+  .hero-content,
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+
+  .profile-image-container,
   .circular-image {
-    margin-bottom: 1rem;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    min-width: unset !important;
   }
 
   .hero {
@@ -1418,15 +1216,17 @@ body.dark-mode .it-card {
   }
 }
 
-/* Mobile Standard (Layar di bawah 768px) */
+/* --- 3. MOBILE STANDARD (Max 768px) --- */
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
   }
+
   .social-icons {
-    justify-content: center; /* Menengahkan ikon ke tengah layar */
+    justify-content: center;
     margin-top: 1.5rem;
   }
+
   .it-grid,
   .arabic-grid,
   .tahfidz-grid {
@@ -1439,14 +1239,80 @@ body.dark-mode .it-card {
     padding: 2rem 1.5rem;
   }
 
+  /* Contact Layout & Effects */
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .contact-info {
+    order: 2; /* Info pindah ke bawah form */
+  }
+
+  .info-item {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  /* Custom Hover Effects for Mobile */
+  .circular-image {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease !important;
+  }
+
+  .circular-image:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    z-index: 10;
+  }
+
+  .mobile-tilt {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    transform-origin: center top;
+  }
+
+  .mobile-tilt:hover {
+    transform: perspective(1000px) rotateX(-15deg) translateY(10px) !important;
+  }
+
+  /* Footer & General */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-social .social-icons {
+    justify-content: center;
+  }
+
   .back-home-container {
     height: auto;
     padding: 60px 20px;
   }
 }
 
-/* Small Mobile (Layar di bawah 480px) */
+/* --- 4. SMALL MOBILE (Max 600px - 480px) --- */
+@media (max-width: 600px) {
+  .detail-item {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .skill-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 @media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
   .hero {
     padding-top: 120px;
   }
@@ -1458,7 +1324,7 @@ body.dark-mode .it-card {
   .buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .buttons a {
@@ -1469,13 +1335,72 @@ body.dark-mode .it-card {
 
   .circular-image,
   .profile-image-container {
-    width: 250px;
-    min-width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
+    max-width: 100%;
   }
-  .skills-item {
-    flex-direction: column;
-    text-align: center;
+
+  .nav-menu {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .contact-form {
     padding: 1.5rem;
+  }
+
+  .info-item {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .info-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .btn-cool-submit,
+  .btn-back-home {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* --- 5. EXTRA SMALL MOBILE (Max 400px) --- */
+@media (max-width: 400px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-wrapper {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .contact-form {
+    padding: 1.2rem;
+  }
+
+  .info-text p {
+    font-size: 0.85rem;
+    word-break: break-all;
+  }
+
+  .info-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 0.8rem;
   }
 }
